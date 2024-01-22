@@ -1,0 +1,43 @@
+package webTest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+class webTest {
+
+	@Test
+	void testInput() {
+		WebDriver driver = null;
+		System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chromedriver-win64\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.coding-midcareer.com/");
+		
+		driver.findElement(By.xpath("/html/body/header/div/div/div[2]/div[2]/a")).click();
+		
+		WebElement name_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[2]/div[2]/input"));
+		WebElement last_name_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[2]/div[3]/input"));
+		WebElement name_eng_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[3]/div[2]/input"));
+		WebElement last_name_eng_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[3]/div[3]/input"));
+		WebElement id_card_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[4]/div[1]/input"));
+		WebElement dob_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[4]/div[2]/input"));
+		WebElement phone_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[5]/div[1]/input"));
+		WebElement email_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[5]/div[2]/input"));
+		
+		name_input.sendKeys("Test");
+		last_name_input.sendKeys("Testing");
+		name_eng_input.sendKeys("Test2");
+		last_name_eng_input.sendKeys("Testing2");
+		id_card_input.sendKeys("0000000000000");
+		dob_input.sendKeys("01/01/1990");
+		phone_input.sendKeys("0000000000");
+		email_input.sendKeys("example@mail.com");
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="webTest" project="webTest" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="webTest.webTest" time="6.645" displayname="webTest" uniqueid="[engine:junit-jupiter]/[class:webTest.webTest]">
+    <testcase name="testInput" classname="webTest.webTest" time="6.645" displayname="testInput()" uniqueid="[engine:junit-jupiter]/[class:webTest.webTest]/[method:testInput()]"/>
+  </testsuite>
+</testrun>
