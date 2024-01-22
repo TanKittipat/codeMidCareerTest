@@ -43,7 +43,7 @@ class webTest {
 		
 		String ageValue = driver.findElement(By.xpath("//*[@id=\"age\"]")).getAttribute("value");
 		
-		if(ageValue.equals("57")) {
+		if(ageValue.equals(2567-2510)) {
 			System.out.print("อายุ : " + ageValue);
 		} else {
 			System.out.print("อายุ : ไม่ตรง");

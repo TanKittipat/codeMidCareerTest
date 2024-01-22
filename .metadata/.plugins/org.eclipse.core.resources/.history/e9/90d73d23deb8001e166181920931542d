@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 class webTest {
 
 	@Test
-	void testInput() throws InterruptedException {
+	void testInput() {
 		WebDriver driver = null;
 		System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chromedriver-win64\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -43,15 +43,9 @@ class webTest {
 		
 		String ageValue = driver.findElement(By.xpath("//*[@id=\"age\"]")).getAttribute("value");
 		
-		if(ageValue.equals("57")) {
-			System.out.print("อายุ : " + ageValue);
-		} else {
-			System.out.print("อายุ : ไม่ตรง");
-		}
-
-		Thread.sleep(5000);
-		
-		driver.close();
+		System.out.print("อายุ : " + ageValue);
+		assertEquals("57", ageValue);
+//		driver.close();
 	}
 
 }

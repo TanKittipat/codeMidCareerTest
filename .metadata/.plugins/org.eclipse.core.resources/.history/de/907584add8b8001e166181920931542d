@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 class webTest {
 
 	@Test
-	void testInput() throws InterruptedException {
+	void testInput() {
 		WebDriver driver = null;
 		System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chromedriver-win64\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -41,17 +41,10 @@ class webTest {
 		phone_input.sendKeys("0000000000");
 		email_input.sendKeys("example@mail.com");
 		
-		String ageValue = driver.findElement(By.xpath("//*[@id=\"age\"]")).getAttribute("value");
+		String age_result = driver.findElement(By.xpath("//*[@id=\"age\"]")).getAttribute("value");
+		assertEquals("57", age_result);
 		
-		if(ageValue.equals("57")) {
-			System.out.print("อายุ : " + ageValue);
-		} else {
-			System.out.print("อายุ : ไม่ตรง");
-		}
-
-		Thread.sleep(5000);
-		
-		driver.close();
+//		driver.close();
 	}
 
 }

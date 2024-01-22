@@ -43,11 +43,6 @@ class webTest {
 		
 		String ageValue = driver.findElement(By.xpath("//*[@id=\"age\"]")).getAttribute("value");
 		
-		if(ageValue.equals("57")) {
-			System.out.print("อายุ : " + ageValue);
-		} else {
-			System.out.print("อายุ : ไม่ตรง");
-		}
 
 		Thread.sleep(5000);
 		
