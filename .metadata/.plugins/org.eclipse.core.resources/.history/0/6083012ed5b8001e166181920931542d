@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 class webTest {
@@ -30,8 +29,6 @@ class webTest {
 		WebElement phone_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[5]/div[1]/input"));
 		WebElement email_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[5]/div[2]/input"));
 		
-		Select drp_title = new Select(driver.findElement(By.xpath("//*[@id=\"pre_name_th\"]")));
-		drp_title.selectByVisibleText("นาย");
 		name_input.sendKeys("Test");
 		last_name_input.sendKeys("Testing");
 		name_eng_input.sendKeys("Test2");
@@ -41,10 +38,10 @@ class webTest {
 		phone_input.sendKeys("0000000000");
 		email_input.sendKeys("example@mail.com");
 		
-		String age_result = driver.findElement(By.xpath("//*[@id=\"age\"]")).getAttribute("value");
+		String age_result = driver.findElement(By.xpath("//*[@id=\"age\"]")).getText();
 		assertEquals("57", age_result);
 		
-//		driver.close();
+		driver.close();
 	}
 
 }
