@@ -31,22 +31,22 @@ class webTest {
 		WebElement email_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[5]/div[2]/input"));
 		
 		Select drp_title = new Select(driver.findElement(By.xpath("//*[@id=\"pre_name_th\"]")));
-		drp_title.selectByIndex(1);
-		name_input.sendKeys("กิตติพัฒน์");
-		last_name_input.sendKeys("ชูวงษ์วาลย์");
-		name_eng_input.sendKeys("Kittipat");
-		last_name_eng_input.sendKeys("Choowongwan");
+		drp_title.selectByVisibleText("นาย");
+		name_input.sendKeys("Test");
+		last_name_input.sendKeys("Testing");
+		name_eng_input.sendKeys("Test2");
+		last_name_eng_input.sendKeys("Testing2");
 		id_card_input.sendKeys("0000000000000");
-		dob_input.sendKeys("12/05/2547");
+		dob_input.sendKeys("01/01/2510");
 		phone_input.sendKeys("0000000000");
 		email_input.sendKeys("example@mail.com");
 		
 		String ageValue = driver.findElement(By.xpath("//*[@id=\"age\"]")).getAttribute("value");
 		
-		if(ageValue.equals(ageValue)) {
-			System.out.print("Age : " + ageValue);
+		if(ageValue.equals("57")) {
+			System.out.print("อายุ : " + ageValue);
 		} else {
-			System.out.print("Age not match");
+			System.out.print("อายุ : ไม่ตรง");
 		}
 
 		Thread.sleep(5000);

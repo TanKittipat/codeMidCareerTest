@@ -31,13 +31,13 @@ class webTest {
 		WebElement email_input = driver.findElement(By.xpath("/html/body/section/div/div/div/form/div[5]/div[2]/input"));
 		
 		Select drp_title = new Select(driver.findElement(By.xpath("//*[@id=\"pre_name_th\"]")));
-		drp_title.selectByIndex(1);
-		name_input.sendKeys("กิตติพัฒน์");
-		last_name_input.sendKeys("ชูวงษ์วาลย์");
-		name_eng_input.sendKeys("Kittipat");
-		last_name_eng_input.sendKeys("Choowongwan");
+		drp_title.selectByVisibleText("นาย");
+		name_input.sendKeys("Test");
+		last_name_input.sendKeys("Testing");
+		name_eng_input.sendKeys("Test2");
+		last_name_eng_input.sendKeys("Testing2");
 		id_card_input.sendKeys("0000000000000");
-		dob_input.sendKeys("12/05/2547");
+		dob_input.sendKeys("01/01/2510");
 		phone_input.sendKeys("0000000000");
 		email_input.sendKeys("example@mail.com");
 		
